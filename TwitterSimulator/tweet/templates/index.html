@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang = "en">
+	<head>
+		<title>Person Simulator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	</head>
+	<body>
+		<header class="custom-bg">
+			<div class="container h-100">
+				<div class="row h-100">
+					<div class="col-12">
+						<div class="text-center m-0 vh-100 d-flex flex-column justify-content-center">
+							<h1 class="display-4 animated fadeIn">{{person_name}} Simulator</h1>
+							
+							<div class="row mt-3">
+								<div class = "col-lg-4 col-sm-6 mx-auto animated fadeIn">
+									<button id = "generateSentenceBtn" class = "btn btn-dark btn-lg generate-sentence">Generate a Thought</button>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class = "col-lg-6 col-sm-10 mx-auto text-light">
+									<div id = "sentenceContainer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.js"
+		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		  crossorigin="anonymous"></script>
+		<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src = "{% static 'js/handleTwitterHandle.js' %}"></script>
+	</body>
+</html>
