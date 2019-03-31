@@ -6,6 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+python-twitter = "*"
+django = "*"
+twitter-scraper = "*"
 
 [requires]
 python_version = "3.7"

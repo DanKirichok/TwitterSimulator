@@ -20,4 +20,5 @@ from tweet import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', views.index, name = "home"),
+	path('handleUsername/', views.handleUsername, name = "Handle username")
 ]

@@ -14,17 +14,34 @@
 			<div class="container h-100">
 				<div class="row h-100">
 					<div class="col-12">
-						<div class="text-center m-0 vh-100 d-flex flex-column justify-content-center">
-							<h1 class="display-4 animated fadeIn">{{person_name}} Simulator</h1>
-							
+						<div class="text-center m-0 vh-100 d-flex flex-column">
+							<h1 class="display-4 animated fadeIn">Tweet Simulator</h1>
 							<div class="row mt-3">
 								<div class = "col-lg-4 col-sm-6 mx-auto animated fadeIn">
-									<button id = "generateSentenceBtn" class = "btn btn-dark btn-lg generate-sentence">Generate a Thought</button>
+									<input class = "text-center input-lg form-control" type = "text" id = "twitter_username_input" name = "twitter_username" placeholder = "Enter a twitter handle" />
+								</div>
+							</div>
+							<div id = "make-tweet-container" class="row mt-3">
+								<div class = "col-lg-4 col-sm-6 mx-auto animated fadeIn">
+									<button id = "generateSentenceBtn" class = "btn btn-dark btn-lg generate-sentence">Make Tweet</button>
+								</div>
+							</div>
+							<div id = "loading-container" class="row mt-3 mx-auto">
+								<div class="spinner-border text-primary mx-auto text-center" role="status">
+									<span class="sr-only">Fetching Tweets...</span>
 								</div>
 							</div>
 							<div class="row mt-3">
-								<div class = "col-lg-6 col-sm-10 mx-auto text-light">
+								<div class = "col-lg-6 col-sm-10 mx-auto">
 									<div id = "sentenceContainer"></div>
+								</div>
+							</div>
+							<div class = "row mt-3">
+								<div class="col-6 mx-auto text-left">
+									<ol class="tweet-list">
+									  
+									</ol>
+									<!-- End: tweet list -->
 								</div>
 							</div>
 						</div>
@@ -32,11 +49,13 @@
 				</div>
 			</div>
 		</header>
+		
 		<script
 		  src="https://code.jquery.com/jquery-3.3.1.js"
 		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 		  crossorigin="anonymous"></script>
 		<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src = "{% static 'js/markov-text.js' %}"></script>
 		<script src = "{% static 'js/handleTwitterHandle.js' %}"></script>
 	</body>
 </html>
